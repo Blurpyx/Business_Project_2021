@@ -57,7 +57,7 @@ header {
     border-radius: 15px;
 }
 
-.footer {
+footer {
     justify-content: flex-end;
     align-self: center;
     margin-bottom: 10px;
