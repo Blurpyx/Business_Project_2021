@@ -9,12 +9,6 @@ body {
     margin: 0;
 }
 
-@media (max-width: 992px) {
-    #banner {
-        width: 75%;
-    }
-}
-
 .wrapper {
     display: flex;
     flex-grow: 1;
@@ -27,15 +21,25 @@ header {
     text-align: center;
 }
 
+.mainTitle {
+    margin-top: 10%;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.mainTitle {
-    margin-top: 25%;
-    font-size: 24;
+.loginForm {
+    display: flex;
+    justify-content: center;
+    flex-basis: 10em;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
 }
 
 .lgnorreg {
@@ -62,3 +66,15 @@ footer {
     align-self: center;
     margin-bottom: 10px;
 }
+
+@media (max-width: 992px) {
+    #banner {
+        width: 75%;
+    }
+
+    .mainTitle {
+        margin-top: 25%;
+        font-size: 24;
+    }
+}
+
