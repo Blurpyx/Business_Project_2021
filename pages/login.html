@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styles.css">
     <title>Login</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h2 class="mainTitle">Log in</h2>
+            <a href="../index.html" style="text-decoration: none;"><i class="material-icons" style="font-size: 2rem;">keyboard_arrow_left</i></a>
+            <h2 class="mainTitle big">Log in</h2>
         </header>
-        <div class="loginForm">
-            <form action="#" id="loginForm">
-                <input type="text" placeholder="Naam en voornaam">
-                <input type="password" placeholder="Wachtwoord">
+
+        <div class="login">
+            <form action="#">
+                <input type="text" id="name" placeholder="Accountnaam">
+                <br>
+                <input type="password" id="pwd" placeholder="Wachtwoord">
+                <br>
+                <input type="checkbox" class="filled-in" checked="unchecked"><span>Ik ben personeel</span>
+                <a href="#" class="button login" style="display: block;">Log in</a>
             </form>
         </div>
+
+        <footer>
+            <img class="banner small" src="../images/UZGent Banner.png" alt="UZ Gent">
+        </footer>
     </div>
 </body>
 </html>
