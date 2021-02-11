@@ -1,2 +1,2 @@
 # Web App voor UZ Gent
-## Auteurs: Tytgat Tommy en Vergrote Niels
+## Auteurs: Tytgat Tommy en Vergote Niels
