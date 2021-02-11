@@ -4,7 +4,17 @@
 body {
     background-color: #B0D2FF;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
-    margin: 0;
+    margin: 0 0 50px 0;
+}
+
+p.debugComment {
+    color: red;
+    font-size: 14px;
+}
+
+.debugComment.center {
+    max-width: 80%;
+    margin: 0 auto 0 auto;
 }
 
 .wrapper {
@@ -60,6 +70,11 @@ header {
 
 .row input::placeholder {
     color: black;
+}
+
+.checkbox-blue[type="checkbox"].filled-in:checked + label:after {
+    border: 2px solid #1E64C8;
+    background-color: #1E64C8;
 }
 
 /* .login input[type="checkbox"] {
@@ -123,3 +138,42 @@ footer {
     margin-top: 20%;
     font-size: 34px;
 }
+
+.top-title {
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row:not(:first-child) {
+    margin-top: 20px;
+}
+
+.row:last-child {
+    margin-bottom: 20px;
+}
+
+.menuItem {
+    max-width: 50%;
+}
+
+.rowItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem a {
+    font-size: 14px;
+    margin: 10px auto auto auto;
+    padding: 5px;
+}
+
+.menuPicture {
+    margin: auto;
+    max-width: 50%;
+    border-radius: 50%;
+}
+
