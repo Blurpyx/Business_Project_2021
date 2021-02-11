@@ -4,7 +4,6 @@
 body {
     background-color: #B0D2FF;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
-    display: flex;
     margin: 0;
 }
 
@@ -15,9 +14,11 @@ body {
     height: 100vh;
 }
 
-.wrapper i {
+header i {
     width: 30px;
     display: block;
+    left: 10px;
+    top: 10px;
     text-align: left;
     cursor: pointer;
 }
