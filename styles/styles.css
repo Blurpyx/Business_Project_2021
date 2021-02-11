@@ -4,7 +4,30 @@
 body {
     background-color: #B0D2FF;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+/*  BEGIN un-comment onderstaande lijnen als je bezig bent op de 000webhost-pagina om een kleine margin 
+    op de onderkant te voorzien voor de sponsor banner van de hosting service. */
+
+/*  TODO: werkt nog niet op hoofdmenu, voor een of andere reden. */
+
+/* body {
     margin: 0 0 50px 0;
+} */
+
+/*  EINDE */
+
+.center {
+    margin: auto;
+}
+
+.bottom {
+    margin: auto auto 10px auto;
 }
 
 p.debugComment {
@@ -19,7 +42,6 @@ p.debugComment {
 
 .wrapper {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     height: 100vh;
 }
@@ -104,6 +126,20 @@ header {
     border-radius: 15px;
 }
 
+.button.medium {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* 
+.button.number-button {
+
+} */
+
+.button.logout-button {
+    background-color: #c9534b;
+}
+
 .button.login {
     width: auto;
 }
@@ -118,6 +154,7 @@ footer {
     .banner {
         width: 75%;
     }
+    
     .banner.small {
         position: fixed;
         bottom: 10px;
@@ -141,6 +178,7 @@ footer {
 
 .top-title {
     margin-top: 0;
+    color: black;
 }
 
 .row {
