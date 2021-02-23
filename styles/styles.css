@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 body {
-    background-color: #B0D2FF;
+    background-color: #D2E0F2;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
     margin: 0;
 }
@@ -49,6 +49,8 @@ p.debugComment {
 header i {
     width: 30px;
     display: block;
+    font-size: 2rem;
+    position: fixed;
     left: 10px;
     top: 10px;
     text-align: left;
@@ -57,10 +59,15 @@ header i {
 
 header {
     margin-top: 10px;
+}
+header h1, header h2, header h3, header h4 {
     text-align: center;
 }
 
 .mainTitle {
+    margin-top: 10%;
+}
+.Title {
     margin-top: 10%;
 }
 
@@ -131,11 +138,6 @@ header {
     margin-top: 10px;
 }
 
-/* 
-.button.number-button {
-
-} */
-
 .button.logout-button {
     background-color: #c9534b;
 }
@@ -150,49 +152,47 @@ footer {
     margin-bottom: 10px;
 }
 
-@media (max-width: 992px) {
-    .banner {
-        width: 75%;
-    }
-    
-    .banner.small {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        max-width: 50%;
-        
-        flex-grow: 1;
-        justify-self: flex-end;
-    }
-
-    .mainTitle {
-        margin-top: 25%;
-        font-size: 24px;
-    }
-}
-
 .mainTitle.big {
     margin-top: 20%;
     font-size: 34px;
 }
-
-.top-title {
-    margin-top: 0;
-    color: black;
+.Title.big {
+    font-size: 34px;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
+    margin: 0;
+    max-width: 100vh;
+}
+.text {
+    font-size: 24px;
+    margin: 0;
+}
+.left {
+    justify-content: flex-start;
+    justify-self: flex-start;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.right { 
+    justify-self: flex-end;
+    margin: auto 15px auto auto;
+    word-break: break-all;
+}
+.row.small {
+    max-height: 50px;
 }
 
 .row:not(:first-child) {
     margin-top: 20px;
 }
 
-.row:last-child {
+/* .row:last-child {
     margin-bottom: 20px;
-}
+} */
 
 .menuItem {
     max-width: 50%;
@@ -215,3 +215,55 @@ footer {
     border-radius: 50%;
 }
 
+.headerPic {
+    max-width: 25%;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+}
+.name {
+    min-width: calc(75% - 10px);
+    font-size: 24px;
+    margin: auto 0 auto auto;
+}
+
+@media (max-width: 992px) {
+    .banner {
+        display: block;
+        width: 75%;
+        margin: 0 auto 0 auto;
+    }
+    
+    .banner.fixed-bottom-right {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .banner.bottom-right {
+        flex: 1;
+        margin: auto 10px 5px auto;
+    }
+
+    .banner.small {
+        max-width: 50%;
+        flex-grow: 1;
+    }
+
+    .mainTitle {
+        margin-top: 10%;
+        font-size: 24px;
+    }
+    .mainTitle.big {
+        margin-top: 10%;
+        font-size: 34px;
+    }
+    .Title {
+        margin-top: 15%;
+    }
+
+}
+
+.top-title {
+    margin-top: 0;
+    color: black;
+}
