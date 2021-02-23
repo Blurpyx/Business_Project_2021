@@ -7,20 +7,15 @@ body {
     margin: 0;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 h1 {
     font-weight: bolder;
 }
-
-/*  BEGIN un-comment onderstaande lijnen als je bezig bent op de 000webhost-pagina om een kleine margin 
-    op de onderkant te voorzien voor de sponsor banner van de hosting service. */
-
-/*  TODO: werkt nog niet op hoofdmenu, voor een of andere reden. */
-
-/* body {
-    margin: 0 0 50px 0;
-} */
-
-/*  EINDE */
 
 .center {
     margin: auto;
@@ -38,12 +33,6 @@ p.debugComment {
 .debugComment.center {
     max-width: 80%;
     margin: 0 auto 0 auto;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
 
 header i {
@@ -260,7 +249,6 @@ footer {
     .Title {
         margin-top: 15%;
     }
-
 }
 
 .top-title {
