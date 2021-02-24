@@ -11,3 +11,4 @@
 # Interesting sites:
 - http://detectmobilebrowsers.com/
 - https://www.tutorialrepublic.com/css-tutorial/css-media-types.php
+- https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm
