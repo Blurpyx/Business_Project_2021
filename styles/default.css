@@ -2,7 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 
+html {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #D2E0F2;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
     margin: 0;
@@ -33,6 +40,7 @@ header {
     background-color: #D2E0F2 !important;
     display: flex !important;
     flex-direction: column;
+    height: 100%;
 }
 
 .grow {
