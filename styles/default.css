@@ -6,13 +6,53 @@ body {
     background-color: #D2E0F2;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
     margin: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
-/* hoofd-kolom, enkele kolom */
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* hoofd-kolom, enkele kolom */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+.grow {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+input {
+    background-color: #D2E0F2;
+}
+input::placeholder {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+.row {
+    display: flex;
+}
+
+.debugComment {
+    color: red;
+}
+
+/* Algemene instellingen voor banner */

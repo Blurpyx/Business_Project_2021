@@ -1,16 +1,99 @@
+/* Instellingen voor banners */
 .banner {
     max-width: 100%;
 }
-
-.s {
+.banner.s {
     width: 25%;
 }
-.m {
+.banner.m {
 width: 50%;
 }
-.l {
+.banner.l {
 width: 60%;
 }
-.xl {
+.banner.xl {
     width: 75%;
+}
+.banner.top {
+    margin-top: 5%;
+}
+.banner.right {
+    margin: 0 10px 10px auto;
+}
+
+/* Instellingen voor paginatitels - niet menu-titels! - zoals Login, Register, Revalidatie-app */
+.page-title {
+    font-weight: 450;
+    text-align: center;
+}
+.page-title.s {
+    font-size: 18px;
+}
+.page-title.m {
+    font-size: 24px;
+}
+.page-title.l {
+    font-size: 30px;
+}
+.page-title.xl {
+    font-size: 40px;
+}
+
+/* Settings voor link-style buttons */
+.button {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #1E64C8;
+}
+.button.s {
+    font-size: 18px;
+    width: 100px;
+    padding: 10px 20px;
+    margin: 20px 0 0 0;
+}
+.button.m {
+    font-size: 24px;
+    width: 150px;
+    padding: 20px 30px;
+    margin: 20px 0 0 0;
+    border-radius: 15px;
+}
+.button.l {
+    font-size: 30px;
+    width: 200px;
+    padding: 25px 35px;
+    margin: 20px 0 0 0;
+    border-radius: 20px;
+}
+.button:last-child {
+    margin: 20px 0;
+}
+.button.center {
+    margin: 10px auto;
+}
+.button.wide {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Instellingen voor Sections */
+
+.debugComment.center {
+    text-align: center;
+}
+
+.grow form {
+    width: 60%; 
+    align-self: center; 
+    margin-top: 50px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.left {
+    margin: 0 auto 0 0;
 }
