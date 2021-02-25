@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+body {
+    background-color: #D2E0F2;
+    font-family: 'Ubuntu', 'Merriweather', sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* hoofd-kolom, enkele kolom */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,16 @@
+.banner {
+    max-width: 100%;
+}
+
+.s {
+    width: 25%;
+}
+.m {
+width: 50%;
+}
+.l {
+width: 60%;
+}
+.xl {
+    width: 75%;
+}
