@@ -1,6 +1,6 @@
 {
     "name": "Revalidatie App",
-    "short-name": "Revalidatie App",
+    "short_name": "Revalidatie App",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color":"#D2E0F2",
