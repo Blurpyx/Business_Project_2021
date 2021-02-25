@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
     <!-- Compiled and minified CSS -->
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
@@ -13,10 +14,14 @@
     <title>Registreren</title>
 </head>
 <body>
-    <h4 class="center">Registratie</h4>
+    <header>
+        <a href="../index.html" style="text-decoration: none;"><img src="../../icons/back-arrow.png" alt="Back"></a>
+        <h4 class="center">Registratie</h4>
+    </header>
     <div class="row container">
         <form class="col s12">
         <!--Rij naam, familienaam-->
+        <section class="center">
           <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
@@ -65,6 +70,7 @@
               <label for="email">Email:</label>
             </div>
           </div>
+        </section>
           <!-- gebruikersnaam en wachtwoord -->
           <section> 
             <div class="container center">
