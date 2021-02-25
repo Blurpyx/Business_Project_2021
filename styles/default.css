@@ -29,11 +29,25 @@ header {
     width: 100%;
 }
 
+.sidenav {
+    background-color: #D2E0F2 !important;
+    display: flex !important;
+    flex-direction: column;
+}
+
 .grow {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -45,10 +59,6 @@ input::placeholder {
 
 label {
     color: black;
-}
-
-.row {
-    display: flex;
 }
 
 .debugComment {
