@@ -8,6 +8,10 @@
     - Op hoofdmenu (/pages/menu.html) links aanpassen zodat ook het icoon (dus volledige div) als knop telt
 - Kijken voor aparte stylesheet te gebruiken voor pc-weergave => standaard gsm-weergave in style.css
 
+# Long-term TODO:
+- Offline werking dmv cache - service worker (20210301 - Web Apps)
+
+
 # Interesting sites:
 - http://detectmobilebrowsers.com/
 - https://www.tutorialrepublic.com/css-tutorial/css-media-types.php
