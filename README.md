@@ -7,7 +7,7 @@
 - Kijken of we een API moeten schrijven voor (bv) de patiënten en personeel op te halen voor een offline lijst van de personen op de afdeling
 - Aanpassingen pagina's:
     - Op hoofdmenu (/pages/menu.html) links aanpassen zodat ook het icoon (dus volledige div) als knop telt
-- Kijken voor aparte stylesheet te gebruiken voor pc-weergave => standaard gsm-weergave in style.css
+- (In Development - branch: remake) Kijken voor aparte stylesheet te gebruiken voor pc-weergave => standaard gsm-weergave in style.css
 - Proberen om MaterializeCSS in cache te zetten voor rappere debug's
 - (In Development - branch: remake) Algemene stylesheets
     - (In Development - branch: remake) Mobile
