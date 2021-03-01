@@ -18,6 +18,8 @@
 
 # Long-term TODO:
 - Offline werking dmv cache - service worker (20210301 - Web Apps)
+    - History laden in cache => bezochte pagina's in cache laden zodat deze later makkelijker laden
+        - Hoe pagina's excluden?
 
 
 # Interesting sites:
@@ -25,7 +27,25 @@
 - https://www.tutorialrepublic.com/css-tutorial/css-media-types.php
 - https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm
 
+- Caching
+    - https://developer.mozilla.org/nl/docs/Web/HTTP/Status#successful_responses
+    - Toevoegen
+        - https://developer.mozilla.org/en-US/docs/Web/API/Cache/add
+        - https://developer.mozilla.org/en-US/docs/Web/API/Cache/put
+    - Opzoeken in cache
+        - https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match
+        - https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open
+    - Cache aanmaken
+        - https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/caches
+    - Fetch
+        - https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent
+        - Request: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request
+        - Respond: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
+    
+
+
+
 
 # Templates:
 - Commits:
-    - Readme Update: 'date yyyymmdd (bv 20210301) readme update' => Voor bv interessante dingen in de les of uitgevoerde dingen in de Business Project les
+    - Readme Update: '(date) yyyymmdd (bv 20210301) readme update' => Voor bv interessante dingen in de les of uitgevoerde dingen in de Business Project les
