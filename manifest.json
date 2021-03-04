@@ -10,7 +10,9 @@
         {
             "src": "images/icons_app/UZ-icon-72x72.png",
             "type":"image/png",
-            "sizes":"72x72"
+            "sizes":"72x72",
+            "purpose":"any maskable"
+            
         },
         {
             "src": "images/icons_app/UZ-icon-96x96.png",
