@@ -11,13 +11,20 @@ const staticcacheName = 'site-static';
 
 //shell-assets zijn je shell pagina's
 //de script pagina's moeten ook, anders worden de css en javascript niet ingeladen
-const shellassets = ["/","index.html","login.html","register.html",
+const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html",
 "/styles/styles.css",
 "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css",
 "https://fonts.googleapis.com/icon?family=Material+Icons",
-"../styles/default.css",
+"/styles/default.css",
 "/styles/mobile.css",
 "/scripts/app.js",
+"/images/UZGent Banner.png",
+'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
+'https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
+"https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3jsGyNPYZvgw.woff2",
+"https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2",
+"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js",
+"https://fonts.gstatic.com/s/materialicons/v78/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
 
 ];
 
@@ -40,6 +47,8 @@ self.addEventListener('install', event =>{
         console.log("caching shell assets");
          return cache.addAll(shellassets);
         })
+    //we cachen de statics, het skelet/ belangrijkste pagina's van onze app
+    //Dit is de App Shell
     );
     
 
@@ -57,9 +66,20 @@ self.addEventListener('fetch', event=>{
     //we luisteren naar een fetch event
     //console.log('Service worker fetch: ',event);
     //deze fetch is de laatste requirement voor de automatisch install banner
+    
+    //vergelijken of de request in de cache zit of moet halen uit server
+    //offline: uit cache
+    
+    //kijk in de caches en vergelijk of er request overeenkomt
+    //cacheRes = response die precached is (in site-static)
+    event.respondWith(
+        caches.match(event.request).then(cacheRes => {
+            return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
 
-    //we cachen de statics, het skelet/ belangrijkste pagina's van onze app
-    //Dit is de App Shell
+        })
+    )
+    
+
 
 
 });
