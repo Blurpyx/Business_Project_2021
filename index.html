@@ -10,23 +10,24 @@
     <link rel="apple-touch-icon" href="./images/icons_app/UZ-icon-96x96.png">
     <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
     <!-- Put <link> here -->
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
 
+    <title>Home</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <img class="banner" src="./images/UZGent Banner.png" alt="UZ Gent">
-            <h2 class="mainTitle">Mijn Revalidatie</h2>
+    <div class="container">
+        <header class="wrapper">
+            <img class="banner top xl" src="./images/UZGent Banner.png" alt="UZ Gent">
+            <h2 class="page-title l">Mijn Revalidatie</h2>
         </header>
 
-        <div class="content">
-            <div class="lgnorreg">
-                <a href="./pages/login.html" class="button">Login</a>
-                <a href="./pages/register.html" class="button">Registreer</a>
-            </div>
-        </div>
-
-        <footer>
+        <section class="grow" style="margin: 50px 0 0 0;">
+            <a href="./pages/login.html" class="button m center">Login</a>
+            <a href="./pages/register.html" class="button m center">Register</a>
+        </section>
+        
+        <footer class="bottom">
             <a href="./contact.html">Contact</a> | <a href="./about.html">About</a>
         </footer>
     </div>

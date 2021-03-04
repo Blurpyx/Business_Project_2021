@@ -12,15 +12,19 @@
     <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Put <link> here -->
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Registreren</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html" style="text-decoration: none;"><img src="../../icons/back-arrow.png" alt="Back"></a>
-        <h4 class="center">Registratie</h4>
-    </header>
+  <div class="container">
+  <header>
+    <a href="../index.html" style="text-decoration: none;"><img src="../../icons/back-arrow.png" alt="Back"></a>
+    <h2 class="page-title l">Registratie</h2>
+  </header>
     <div class="row container">
         <form class="col s12">
         <!--Rij naam, familienaam-->
@@ -109,12 +113,18 @@
                 
             </div>
           </section>
-          <section class="center">
+          <section class="center col s8">
             <div class="row"><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></div>
-            <button class="btn waves-effect waves-light"type="submit">Registreren</button>
+            <div class="grow">
+              <a href="./menu.html" class="button m wide">Registreer</a>
+            </div>
             
           </section>
         </form>
+      </div>
+      <footer>
+        <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
+      </footer>
       </div>
 </body>
 </html>

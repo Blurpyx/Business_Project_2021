@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+hmtl{
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #D2E0F2;
+    font-family: 'Ubuntu', 'Merriweather', sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hoofd-kolom, enkele kolom */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+.sidenav {
+    background-color: #D2E0F2 !important;
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grow {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #D2E0F2;
+}
+input::placeholder {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+.debugComment {
+    color: red;
+}
+
+/* Algemene instellingen voor banner */

@@ -193,7 +193,7 @@ footer {
     flex-direction: column;
 }
 
-.menuItem a {
+.menuItem .button {
     font-size: 14px;
     margin: 10px auto auto auto;
     padding: 5px;
@@ -255,4 +255,8 @@ footer {
 .top-title {
     margin-top: 0;
     color: black;
+}
+
+button.button {
+    font-size: 18px;
 }
