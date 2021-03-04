@@ -55,6 +55,7 @@ width: 60%;
     font-weight: 350;
     text-align: center;
     margin: 20px 0;
+    word-wrap: break-word;
 }
 .title.s {
     font-size: 18px;
@@ -67,6 +68,17 @@ width: 60%;
 }
 .title.xl {
     font-size: 40px;
+}
+.title.left {
+    text-align: left;
+}
+
+.top-colorized {
+    width: 100% !important;
+    background-color: #1E64C8;
+    border-radius: 0 0 50px 50px;
+    padding-bottom: 10px;
+    margin: 0 !important;
 }
 
 /* Settings voor link-style buttons */
@@ -82,27 +94,23 @@ width: 60%;
 .button.xs {
     font-size: 14px;
     min-width: 100px;
-    max-width: 50%;
     /* padding: 5px 10px; */
     margin: 5px 0 0 0;
 }
 .button.s {
     font-size: 18px;
     min-width: 100px;
-    max-width: 60%;
     padding: 10px 20px;
     margin: 20px 0 0 0;
 }
 .button.m {
     font-size: 24px;
     min-width: 150px;
-    max-width: 70%;
     padding: 20px 30px;
     margin: 20px 0 0 0;
     border-radius: 15px;
 }
 .button.l {
-    max-width: 80%;
     font-size: 30px;
     min-width: 200px;
     padding: 25px 35px;
@@ -153,8 +161,10 @@ a .button {
 /* Instellingen voor side-nav */
 .side-nav-item {
     /* border: 1px solid black; */
+    text-decoration: none;
     display: flex !important;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 45% !important;
     height: 100% !important;
@@ -180,6 +190,7 @@ a .button {
 img.page-banner {
     width: 30%;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 /* Instellingen voor Sections */
@@ -196,6 +207,14 @@ img.page-banner {
     align-items: center;
 }
 
+.row:not(:first-child) {
+    margin-top: 20px;
+}
+
+.row.colorized {
+    margin-bottom: 0;
+}
+
 .left {
     margin: 0 auto 0 5px;
 }
@@ -206,4 +225,34 @@ img.page-banner {
     align-content: center;
     justify-self: center;
     align-self: center;
+}
+
+div.color-block {
+    width: 100%;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 50px;
+    margin: 10px 0 auto 0;
+}
+
+/* Tekstinstellingen */
+
+.text {
+    margin: 8px 0;
+}
+.text.s {
+    font-size: 16px;
+}
+.text.m {
+    font-size: 18px;
+}
+.text.l {
+    font-size: 20px;
+}
+.text.xl {
+    font-size: 24px;
+}
+
+span.right {
+    margin: auto 0 auto auto;
 }
