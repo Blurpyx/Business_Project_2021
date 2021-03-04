@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Put <link> here -->
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="manifest" href="/manifest.json">
@@ -14,10 +24,6 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <!-- Put <link> here -->
-    <link rel="stylesheet" href="../styles/default.css">
-    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
-
     <title>Log in</title>
 </head>
 <body>
@@ -28,7 +34,7 @@
         </header>
 
         <section class="grow">
-            <form action="#">
+            <form action="#" style="width: 60%;">
                 <input type="text" id="name" placeholder="Accountnaam">
                 <br>
                 <input type="password" id="pwd" placeholder="Wachtwoord">
@@ -38,10 +44,10 @@
                     <span>Ik ben personeel</span>
                 </label>
                 <div class="grow">
-                    <a href="./profile.html" class="button m wide">Log in</a>
+                    <a href="../pages/menu.html" class="button m center wide">Log in</a>
                 </div>
             </form>
-            <p class="debugComment center ">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
+            <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
         </section>
 
         <footer>

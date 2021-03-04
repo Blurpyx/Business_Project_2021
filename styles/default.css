@@ -8,12 +8,13 @@ hmtl{
 }
 
 body {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
-    background-color: #D2E0F2;
+    background-color: #D2E0F2 !important;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -26,10 +27,12 @@ body {
 /* hoofd-kolom, enkele kolom */
 .container {
     height: 100%;
-    width: 100%;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     align-items: center;
+    z-index: 0;
 }
 
 header {
@@ -48,14 +51,21 @@ header {
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
+    padding: 0 10px;
 }
 .row {
     display: flex;
+    margin: 0 auto;
+    flex-basis: 100%;
+    width: 100%;
+    word-wrap: break-word;
 }
 .column {
-    flex: 1;
     display: flex;
     flex-direction: column;
+}
+.reversed {
+    flex-wrap: wrap-reverse;
 }
 
 input {
