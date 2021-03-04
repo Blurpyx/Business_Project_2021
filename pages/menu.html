@@ -4,75 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Put <link> here -->
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
+    
     <title>Menu</title>
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <a href="../index.html" style="text-decoration: none;"><img src="../../icons/back-arrow.png" alt="Back"></a>
-            <h1 class="mainTitle top-title">Hoofdmenu</h1>
+        <header class="flex">
+            <a href="../index.html" style="text-decoration: none; margin: auto 10px;"><img src="../../icons/back-arrow.png" alt="Back"></a>
+            <h2 class="title l top-title">Hoofdmenu</h2>
         </header>
 
-        <div class="content rows">
+        <div class="container" style="margin-top: 10px;">
             <div class="row">
-                <div class="menuItem rowItem">
-                    <img src="../images/profile pic.png" alt="Profielfoto" class="menuPicture">
-                    <a href="./menu/profile.html" class="button">Profiel</a>
-                </div>
-                <div id="therapie" class="menuItem rowItem">
-                    <img src="../images/therapy.png" alt="Therapie" class="menuPicture">
-                    <a href="./menu/therapie.html" class="button">Therapie</a>
-                </div>
+                <a href="./menu/profiel.html" class="side-nav-item waves-effect column">
+                    <img src="../images/profielfoto.png" alt="Profiel" class="side-nav-icon">
+                    <span class="button xs">Profiel</span>
+                </a>
+                <a href="./menu/therapie.html" class="side-nav-item waves-effect column">
+                    <img src="../images/therapie.png" alt="Therapie" class="side-nav-icon">
+                    <span class="button xs">Therapie</span>
+                </a>
             </div>
             <div class="row">
-                <div class="menuItem rowItem">
-                    <img src="../images/calendar.png" alt="Kalender" class="menuPicture">
-                    <a href="./menu/calendar.html" class="button">Kalender</a>
-                </div>
-                <div class="menuItem rowItem">
-                    <img src="../images/navigation.png" alt="Navigatie" class="menuPicture">
-                    <a href="./menu/navigation.html" class="button">Ik wil naar...</a>
-                </div>
+                <a href="./menu/kalender.html" class="side-nav-item waves-effect column">
+                    <img src="../images/kalender.png" alt="Kalender" class="side-nav-icon">
+                    <span class="button xs">Kalender</span>
+                </a>
+                <a href="./menu/navigatie.html" class="side-nav-item waves-effect column">
+                    <img src="../images/navigatie.png" alt="Navigatie" class="side-nav-icon">
+                    <span class="button xs">Ik wil naar...</span>
+                </a>
             </div>
             <div class="row">
-                <div class="menuItem rowItem">
-                    <img src="../images/chat.png" alt="Chat" class="menuPicture">
-                    <a href="./menu/chat.html" class="button">Chat</a>
-                </div>
-                <div class="menuItem rowItem">
-                    <img src="../images/camera.png" alt="Camera" class="menuPicture">
-                    <a href="./menu/photos.html" class="button">Foto's</a>
-                </div>
+                <a href="./menu/chat.html" class="side-nav-item waves-effect column">
+                    <img src="../images/chat.png" alt="Chat" class="side-nav-icon">
+                    <span class="button xs">Chat</span>
+                </a>
+                <a href="./menu/fotos.html" class="side-nav-item waves-effect column">
+                    <img src="../images/fotos.png" alt="Fotos" class="side-nav-icon">
+                    <span class="button xs">Foto's</span>
+                </a>
             </div>
             <div class="row">
-                <div class="menuItem rowItem">
-                    <img src="../images/diary.png" alt="Dagboek" class="menuPicture">
-                    <a href="./menu/diary.html" class="button">Dagboek</a>
-                </div>
-                <div class="menuItem rowItem">
-                    <img src="../images/prikbord.png" alt="Prikbord" class="menuPicture">
-                    <a href="./menu/prikbord.html" class="button">Prikbord</a>
-                </div>
+                <a href="./menu/dagboek.html" class="side-nav-item waves-effect column">
+                    <img src="../images/dagboek.png" alt="Dagboek" class="side-nav-icon">
+                    <span class="button xs">Dagboek</span>
+                </a>
+                <a href="./menu/prikbord.html" class="side-nav-item waves-effect column">
+                    <img src="../images/prikbord.png" alt="Prikbord" class="side-nav-icon">
+                    <span class="button xs">Prikbord</span>
+                </a>
             </div>
             <div class="row">
-                <div class="menuItem rowItem">
-                    <img src="../images/news.png" alt="News" class="menuPicture">
-                    <a href="./menu/news.html" class="button">Nieuws</a>
-                </div>
-                <div class="menuItem rowItem">
-                    <img src="../images/team.png" alt="Team" class="menuPicture">
-                    <a href="./menu/team.html" class="button">Team</a>
-                </div>
+                <a href="./menu/nieuws.html" class="side-nav-item waves-effect column">
+                    <img src="../images/nieuws.png" alt="Nieuws" class="side-nav-icon">
+                    <span class="button xs">Kalender</span>
+                </a>
+                <a href="./menu/team.html" class="side-nav-item waves-effect column">
+                    <img src="../images/team.png" alt="Team" class="side-nav-icon">
+                    <span class="button xs">Team</span>
+                </a>
             </div>
+            
             <div class="row">
-                <img class="banner small bottom-right" src="../images/UZGent Banner.png" alt="UZ Gent">
+                <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
             </div>
         </div>
     </div>
