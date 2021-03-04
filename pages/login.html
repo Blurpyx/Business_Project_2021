@@ -27,31 +27,31 @@
     <title>Log in</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="container">
         <header>
-            <a href="../index.html" style="text-decoration: none;"><img src="../../icons/back-arrow.png" alt="Back"></a>
-            <h2 class="mainTitle big">Log in</h2>
+            <a href="../index.html" style="text-decoration: none;"><img src="../images/icons/back-arrow.png" alt="Back"></a>
+            <h2 class="page-title l">Log in</h2>
         </header>
 
-        <div class="login">
-            <form action="#">
+        <section class="grow">
+            <form action="#" style="width: 60%;">
                 <input type="text" id="name" placeholder="Accountnaam">
                 <br>
                 <input type="password" id="pwd" placeholder="Wachtwoord">
                 <br>
-                <label>
+                <label class="left" style="margin-bottom: 30px;">
                     <input type="checkbox" class="filled-in">
-                    <span>
-                        Ik ben personeel
-                    </span>
+                    <span>Ik ben personeel</span>
                 </label>
-                <a href="./menu.html" class="button login" style="display: block;">Log in</a>
+                <div class="grow">
+                    <a href="../pages/menu.html" class="button m center wide">Log in</a>
+                </div>
             </form>
-        </div>
-        <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
+            <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
+        </section>
 
-        <footer class="row">
-            <img class="banner small bottom-right" src="../images/UZGent Banner.png" alt="UZ Gent">
+        <footer>
+            <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
         </footer>
     </div>
 </body>
