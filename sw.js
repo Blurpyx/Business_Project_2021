@@ -59,6 +59,23 @@ self.addEventListener('install', event =>{
 
 self.addEventListener('activate', event=>{
     //console.log("Service worker is activated: ");
+    //hier gaan we de oude cache wissen
+    //dit is het moeilijkste stuk van caching, meer info: https://www.youtube.com/watch?v=g9LfyCZjeKI&list=PL4cUxeGkcC9gTxqJBcDmoi5Q2pzDusSL7&index=17&ab_channel=TheNetNinja
+
+    //wat zijn de keys?
+    //keys= de namen van de caches
+    event.waitUntil(
+        caches.keys().then(keys=>{
+            //console.log(keys);
+            return Promise.all(keys
+                .filter(key=>key !== staticcacheName) //we wissen de oude caches verschillend van staticcacheName
+                .map(key=>caches.delete(key))
+                );
+        })
+    )
+
+
+
 });
 
 
