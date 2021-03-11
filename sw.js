@@ -34,7 +34,9 @@ const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html
 "https://fonts.gstatic.com/s/materialicons/v81/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
 "/manifest.json",
 "/images/icons_app/UZ-icon-144x144.png",
-"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+"/pages/offline.html",
+"/pages/menu-offline.html"
 
 ];
 
@@ -78,7 +80,7 @@ self.addEventListener('activate', event=>{
         caches.keys().then(keys=>{
             //console.log(keys);
             return Promise.all(keys
-                .filter(key=>key !== staticcacheName) //we wissen de oude caches verschillend van staticcacheName
+                .filter(key=>key !== staticcacheName && key !== dynamicCache) //we wissen de oude caches verschillend van staticcacheName
                 .map(key=>caches.delete(key))
                 );
         })
@@ -88,7 +90,7 @@ self.addEventListener('activate', event=>{
 
 });
 
-
+//FetchHandler:
 self.addEventListener('fetch', event=>{
     //we luisteren naar een fetch event
     //console.log('Service worker fetch: ',event);
@@ -110,7 +112,7 @@ self.addEventListener('fetch', event=>{
                 })
             })
 
-        })
+        }).catch(()=> caches.match('pages/offline.html')) //error opvangen als file ophalen gefailed is(= file is niet in cache en we vinden niet op server/offline)
     )
     
 
