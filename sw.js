@@ -7,6 +7,9 @@ dat het activatie moment geactiveerd wordt.)
 
 */
 const staticcacheName = 'site-static-v2';
+
+const dynamicCache = 'site-dynamic-v1';
+
 // "/" == index.html (het kan dit zijn als zowel index.html)
 
 //shell-assets zijn je shell pagina's
@@ -98,7 +101,14 @@ self.addEventListener('fetch', event=>{
     //cacheRes = response die precached is (in site-static)
     event.respondWith(
         caches.match(event.request).then(cacheRes => {
-            return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
+            return cacheRes || fetch(event.request) //als cahceREs leeg is, doe gewoon de fetch request
+            .then(fetchRes => { //we nemen de response (die we krijgen omdat deze nog niet in de cache stond)
+                return caches.open(dynamicCache).then(cache => { //we steken in de nieuwe 
+                    cache.put(event.request.url, fetchRes.clone()); //clone van de response in de cache
+                    return fetchRes;
+                    //als we ooit offline zijn vindt hij de gecachde pagina mogelijk terug in de caches (dynamic/static cache)
+                })
+            })
 
         })
     )

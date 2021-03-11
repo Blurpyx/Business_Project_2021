@@ -7,7 +7,7 @@
     - Alles shellassests (index.html, login.html en register.html laden deftig in)
 - ~~Cache Versioning (Static Caches)~~
 
-- Dynamic Caching
+- ~~Dynamic Caching~~ (about.html en contact.html)
 - Offline fallback page
 - Conditional Fallbacks
 - Limiting cache size
