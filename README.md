@@ -9,7 +9,7 @@
 
 - ~~Dynamic Caching~~ (about.html en contact.html)
 - ~~Offline fallback page~~ (offline-menu.html niet volledig functioneel)
-- Conditional Fallbacks
+- ~~Conditional Fallbacks~~
 - Limiting cache size
 - Database???!!!
 
