@@ -41,6 +41,19 @@ const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html
 ];
 
 
+//cache size limit function
+const limitCacheSize = (name, size) =>
+{
+    caches.open(name).then(cache => {
+        cache.keys().then(keys =>{ //keys = array van alle files in een cache
+            if(keys.length > size){
+                cache.delete(keys[0]).then(limitCacheSize(name, size));
+            }
+        })
+    })
+};
+
+
 //install een service worker (als er een is)
 self.addEventListener('install', event =>{
     console.log("Service worker has been installed");
@@ -107,6 +120,7 @@ self.addEventListener('fetch', event=>{
             .then(fetchRes => { //we nemen de response (die we krijgen omdat deze nog niet in de cache stond)
                 return caches.open(dynamicCache).then(cache => { //we steken in de nieuwe 
                     cache.put(event.request.url, fetchRes.clone()); //clone van de response in de cache
+                    limitCacheSize(dynamicCache, 10) //maximum items in de dynamiccache via functie aangemaakt bovenaan
                     return fetchRes;
                     //als we ooit offline zijn vindt hij de gecachde pagina mogelijk terug in de caches (dynamic/static cache)
                 })
