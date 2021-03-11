@@ -6,25 +6,32 @@ dat het activatie moment geactiveerd wordt.)
 
 
 */
-const staticcacheName = 'site-static';
+const staticcacheName = 'site-static-v2';
 // "/" == index.html (het kan dit zijn als zowel index.html)
 
 //shell-assets zijn je shell pagina's
 //de script pagina's moeten ook, anders worden de css en javascript niet ingeladen
 const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html",
-"/styles/styles.css",
+
 "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css",
 "https://fonts.googleapis.com/icon?family=Material+Icons",
 "/styles/default.css",
 "/styles/mobile.css",
 "/scripts/app.js",
 "/images/UZGent Banner.png",
+"/images/icons/back-arrow.png",
 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
 'https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
 "https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3jsGyNPYZvgw.woff2",
 "https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2",
+"https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3jsGyN.woff2",
+
 "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js",
-"https://fonts.gstatic.com/s/materialicons/v78/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+"https://fonts.gstatic.com/s/materialicons/v78/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+"https://fonts.gstatic.com/s/materialicons/v81/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+"/manifest.json",
+"/images/icons_app/UZ-icon-144x144.png",
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 
 ];
 

@@ -4,8 +4,16 @@
 # Niels TODO:
 
 - ~~Precaching Assets~~
+    - Alles shellassests (index.html, login.html en register.html laden deftig in)
 - ~~Cache Versioning (Static Caches)~~
-- 
+
+- Dynamic Caching
+- Offline fallback page
+- Conditional Fallbacks
+- Limiting cache size
+- Database???!!!
+
+    ##Hoe database doen?
 
 
 # TODO:
