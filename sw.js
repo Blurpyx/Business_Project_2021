@@ -6,9 +6,9 @@ dat het activatie moment geactiveerd wordt.)
 
 
 */
-const staticcacheName = 'site-static-v2';
+const staticcacheName = 'site-static-v9';
 
-const dynamicCache = 'site-dynamic-v1';
+const dynamicCache = 'site-dynamic-v9';
 
 // "/" == index.html (het kan dit zijn als zowel index.html)
 
@@ -112,8 +112,15 @@ self.addEventListener('fetch', event=>{
                 })
             })
 
-        }).catch(()=> caches.match('pages/offline.html')) //error opvangen als file ophalen gefailed is(= file is niet in cache en we vinden niet op server/offline)
-    )
+        }).catch(()=> {
+            //filteren op html pages
+            //DIT ZIJN DE CONDITIONAL FALLBACKS
+            //we kunnen checken op images en zo zodat we een error png teruggeven
+        if(event.request.url.indexOf('.html') > -1){
+            return caches.match('/pages/offline.html');
+        }
+        }) //error opvangen als file ophalen gefailed is(= file is niet in cache en we vinden niet op server/offline)
+    );
     
 
 
