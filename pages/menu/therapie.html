@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -17,35 +18,58 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="manifest" href="/manifest.json">
+
     <!-- ios support -->
     <link rel="apple-touch-icon" href="./images/icons_app/UZ-icon-96x96.png">
     <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
     <!-- Compiled and minified JavaScript -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+    <!-- Bootstrap 5 -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!-- JS en dependencies -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+
+    <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <title>Therapie</title>
 </head>
 <body>
-    <div class="container">
-        <header class="top-colorized">
-            <div class="row colorized">
-                <a href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
-                <h2 class="title l top-title">Therapie</h2>
-            </div>
-            <!-- <div class="row">
-                <img class="page-banner" src="../../images/profielfoto.png" alt="profielfoto">
-                <p class="page-title s center grow" id="name">Tommy Tytgat</p>
-            </div> -->
-        </header>
-
-        <section class="grow color-block" style="height: 50%;">
-            
-        </section>
-
-        <div class="row">
-            <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+    <header class="top-colorized">
+        <div style="display: flex;">
+            <a id="backbutton-page" href="#" style="text-decoration: none; margin: auto 10px; display: none;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <a id="backbutton-back" href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <h2 class="title l top-title">Therapie</h2>
         </div>
+        <div class="week-container m" id="weekDetails">08/03/'21 - 14/03/'21</div>
+    </header>
+
+    <div class="container" id="weekPlanning" style="margin: 10px 0;">
+        <span class="day day-container m">Maandag</span>
+        <span class="day day-container m">Dinsdag</span>
+        <span class="day day-container m">Woensdag</span>
+        <span class="day day-container m">Donderdag</span>
+        <span class="day day-container m">Vrijdag</span>
+        <span class="day day-container m">Zaterdag</span>
+        <span class="day day-container m">Zondag</span>
     </div>
+
+    <div class="container" id="dagPlanning" style="display: none;">
+        <span class="day-container m">8u: Kine</span>
+        <span class="day-container m">10u: Neuro</span>
+        <span class="day-container m">13u: Ergo</span>
+        <span class="day-container m">14u: Kine</span>
+    </div>
+
+    <footer class="flex">
+        <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent">
+    </footer>
+
+    <!-- Eigen script -->
+    <script src="../../scripts/planning-test.js"></script>
 </body>
 </html>

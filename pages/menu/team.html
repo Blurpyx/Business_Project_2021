@@ -4,9 +4,187 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Put <link> here -->
+    <link rel="stylesheet" href="../../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../styles/mobile.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./images/icons_app/UZ-icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <!-- CSS only -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+    <!-- JS en dependencies -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
+
     <title>Team</title>
 </head>
 <body>
-    
+    <header class="top-colorized">
+        <div class="row" style="justify-content: flex-start; margin-bottom: 0;">
+            <a href="#" id="backButton" style="text-decoration: none; margin: auto 10px; display: none;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <a href="../menu.html" id="homeButton" style="text-decoration: none; margin: auto 10px; display: flex;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <h2 class="title l top-title" id="title">Team</h2>
+        </div>
+    </header>
+
+    <div class="container" id="divButtons" style="padding: 0 1em;">
+        <div class="color-block" style="flex-grow: 1;" id="personeelscategorieen">
+            <div class="column" style="font-size: 24px;">
+                <span class="team-categorie-button" id="hoofdverplgk" style="display: flex; align-content: center;">Hoofdverpleeg-kundige</span>
+                <span class="team-categorie-button" id="artsen">Artsen</span>
+                <span class="team-categorie-button" id="ergo">Ergo-pedagogie</span>
+                <span class="team-categorie-button" id="neuro">Neurologen</span>
+                <span class="team-categorie-button" id="kine">Kinesisten</span>
+                <span class="team-categorie-button" id="logo">Logopedagogie</span>
+                <span class="team-categorie-button" id="psycholoog">Psycholoog</span>
+                <span class="team-categorie-button" id="sociale">Sociale Dienst</span>
+            </div>
+           <div class="row" style="font-size: 24px;">
+                <div class="column" style="width: 47.5%; margin-left: 2.5%;">
+                </div>
+                <div class="column" style="width: 47.5%; margin-left: 2.5%;">
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Artsen" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; margin-top: 0;">Artsen</h3>
+                <img src="/images/personeel/Artsen/Prof. Dr. Bouche.jpg" alt="Dr Bouche" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Prof. Dr. Bouche</span>
+                <img src="/images/personeel/Artsen/Prof. Dr. Oostra.png" alt="Dr Oostra" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large;">Prof. Dr. Oostra</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Ergo" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; margin-top: 0;">Ergo</h3>
+                <img src="/images/personeel/Ergo/Ergo Bauters Jens.jpg" alt="Bauters Jens" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Bauters Jens</span>
+                <img src="/images/personeel/Ergo/Ergo De Maet Jonas.jpg" alt="De Maet Jonas" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">De Maet Jonas</span>
+                <img src="/images/personeel/Ergo/Ergo Loosveld Hebe.jpg" alt="Loosveld Hebe" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Loosveld Hebe</span>
+                <img src="/images/personeel/Ergo/Ergo Slos Sofie.jpg" alt="Slos Sofie" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Slos Sofie</span>
+                <img src="/images/personeel/Ergo/Ergo Vandecaveye Fleurin.jpg" alt="Vandecaveye Fleurin" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Vandecaveye Fleurin</span>
+                <img src="/images/personeel/Ergo/Ergo Vercaemer Sarah.jpg" alt="Vercaemer Sarah" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Vercaemer Sarah</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Hoofdverplgk" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; font-size: 24px; margin-top: 0;">Hoofdverpleegkundige</h3>
+                <img src="/images/personeel/hoofdverpleegkundige/Hoofdverpleegkundige Barbara Devolder.jpg" alt="Barbara Devolder" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Barbara Devolder</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Kine" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; margin-top: 0;">Kine</h3>
+                <img src="/images/personeel/Kine/Kine Lambrecht Gert.jpg" alt="Lambrecht Gert" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Lambrecht Gert</span>
+                <img src="/images/personeel/Kine/Kine Rasschaert Jolein.jpg" alt="Rasschaert Jolein" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Rasschaert Jolein</span>
+                <img src="/images/personeel/Kine/Kine Van Bladel Anke.jpg" alt="Van Bladel Anke" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Van Bladel Anke</span>
+                <img src="/images/personeel/Kine/Kine Vanhoonacker Ann.jpg" alt="Vanhoonacker Ann" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Vanhoonacker Ann</span>
+                <img src="/images/personeel/Kine/Kine Vankeirsbilck Nancy.jpg" alt="Vankeirsbilck Nancy" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Vankeirsbilck Nancy</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Logo" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; margin-top: 0;">Logo</h3>
+                <img src="/images/personeel/Logo/Logo De Vos Nasly.jpg" alt="De Vos Nasly" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">De Vos Nasly</span>
+                <img src="/images/personeel/Logo/Logo Goessens Carolien.jpg" alt="Goessens Carolien" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Goessens Carolien</span>
+                <img src="/images/personeel/Logo/Logo Lecluse Jozefien.jpg" alt="Lecluse Jozefien" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Lecluse Jozefien</span>
+                <img src="/images/personeel/Logo/Logo Van Camp Martine.jpg" alt="Van Camp Martine" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Van Camp Martine</span>
+                <img src="/images/personeel/Logo/Logo Van De Kerckhove Sabien.jpg" alt="Van De Kerckhove Sabien" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Van De Kerckhove Sabien</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Neuro" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; margin-top: 0;">Neuro</h3>
+                <img src="/images/personeel/Neuro/Neuro Broux Evelyne.jpg" alt="Broux Evelyne" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Broux Evelyne</span>
+                <img src="/images/personeel/Neuro/Neuro Delanghe Pascale.jpg" alt="Delanghe Pascale" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Delanghe Pascale</span>
+                <img src="/images/personeel/Neuro/Neuro Engels Annelies.jpg" alt="Engels Annelies" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Engels Annelies</span>
+                <img src="/images/personeel/Neuro/Neuro Vangenechten Ann.jpg" alt="Vangenechten Ann" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Vangenechten Ann</span>
+                <img src="/images/personeel/Neuro/Neuro Werbrouck Sara.jpg" alt="Werbrouck Sara" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Werbrouck Sara</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Psych" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; font-size: 32px; margin-top: 0;">Psycholoog</h3>
+                <img src="/images/personeel/Psycholoog/Psycholoog Lannoo Engelien.jpg" alt="Lannoo Engelien" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Lannoo Engelien</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-block" id="Social" style="padding: 0 1em;">
+        <div class="color-block">
+            <div class="column" style="width: 90%; margin: 0 auto;">
+                <h3 style="text-align: center; font-size: 28px; margin-top: 0;">Sociale Dienst</h3>
+                <img src="/images/personeel/Sociale dienst/Sociale dienst Bohez Diede.jpg" alt="Bohez Diede" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Bohez Diede</span>
+                <img src="/images/personeel/Sociale dienst/Sociale dienst Pennoit Viviane.jpg" alt="Pennoit Viviane" style="border-radius: 2em;">
+                <span style="text-align: center; color: #525252; font-size: large; margin-bottom: 1em;">Pennoit Viviane</span>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 1em;">
+        <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+    </footer>
+
+    <script src="/scripts/team-test.js"></script>
 </body>
 </html>
