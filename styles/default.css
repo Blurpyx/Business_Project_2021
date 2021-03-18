@@ -10,6 +10,7 @@ hmtl{
 body {
     display: flex !important;
     flex-direction: column;
+    color: black;
     background-color: #D2E0F2 !important;
     font-family: 'Ubuntu', 'Merriweather', sans-serif;
     margin: 0;
