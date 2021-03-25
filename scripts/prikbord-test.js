@@ -13,18 +13,22 @@ $(document).ready( function () {
     });
 
     $("#addNote").click( function () {
+        Title("");
         Input();
     });
 
     $("#addArts").click( function () {
+        Title("Bericht voor Artsen");
         Input();
     });
 
     $("#addNeuro").click( function () {
+        Title("Bericht voor Neurologen");
         Input();
     });
 
     $("#addErgo").click( function () {
+        Title("Bericht voor Ergo");
         Input();
     });
 });
@@ -48,4 +52,8 @@ function Input() {
     Hide("homeButton");
     Visible("subTitle");
     Visible("backButton");
+}
+
+function Title(Message) {
+    $("#note_title").val(Message);
 }
