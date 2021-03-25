@@ -72,12 +72,12 @@ self.addEventListener('fetch', event=>{
     
     //kijk in de caches en vergelijk of er request overeenkomt
     //cacheRes = response die precached is (in site-static)
-    event.respondWith(
-        caches.match(event.request).then(cacheRes => {
-            return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
+    // event.respondWith(
+    //     caches.match(event.request).then(cacheRes => {
+    //         return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
 
-        })
-    )
+    //     })
+    // )
     
 
 

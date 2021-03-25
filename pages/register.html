@@ -123,5 +123,29 @@
       <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
     </footer>
   </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCMRRBhJ6DIpDsky7v1LKqLKbR2H7IzEjc",
+      authDomain: "my-agenda-app-uz-gent.firebaseapp.com",
+      projectId: "my-agenda-app-uz-gent",
+      storageBucket: "my-agenda-app-uz-gent.appspot.com",
+      messagingSenderId: "534118084923",
+      appId: "1:534118084923:web:75494ad5b84705eb43071e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+  </script>
+  <script src="/scripts/db.js"></script>
 </body>
 </html>
