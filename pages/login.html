@@ -24,6 +24,15 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
+    <!-- Put <script> here -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    
     <title>Log in</title>
 </head>
 <body>
@@ -34,8 +43,8 @@
         </header>
 
         <section class="grow">
-            <form action="#" style="width: 60%;">
-                <input type="text" id="name" placeholder="Accountnaam">
+            <form action="#" style="width: 60%;" id="login-form">
+                <input type="text" id="email" placeholder="Email">
                 <br>
                 <input type="password" id="pwd" placeholder="Wachtwoord">
                 <br>
@@ -44,7 +53,7 @@
                     <span>Ik ben personeel</span>
                 </label>
                 <div class="grow">
-                    <a href="../pages/menu.html" class="button m center wide">Log in</a>
+                    <button type="submit" class="button m center wide" id="login-button">Log in</button>
                 </div>
             </form>
             <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
@@ -54,7 +63,40 @@
             <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
         </footer>
     </div>
-
+    <script>
+        // const firebase = require("firebase");
+        // // Required for side-effects
+        // require("firebase/firestore");
+  
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMRRBhJ6DIpDsky7v1LKqLKbR2H7IzEjc",
+            authDomain: "my-agenda-app-uz-gent.firebaseapp.com",
+            projectId: "my-agenda-app-uz-gent",
+            storageBucket: "my-agenda-app-uz-gent.appspot.com",
+            messagingSenderId: "534118084923",
+            appId: "1:534118084923:web:75494ad5b84705eb43071e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.firestore().enablePersistence()
+            .catch((err) => {
+                if (err.code == 'failed-precondition') {
+                    // Multiple tabs open, persistence can only be enabled
+                    // in one tab at a a time.
+                    // ...
+                } else if (err.code == 'unimplemented') {
+                    // The current browser does not support all of the
+                    // features required to enable persistence
+                    // ...
+                }
+            });
+        // Subsequent queries will use persistence, if it was enabled successfully
+  
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+    <script src="/scripts/login-script.js"></script>
     <script src="/scripts/app.js"></script>
 </body>
 </html>
