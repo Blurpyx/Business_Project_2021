@@ -12,7 +12,7 @@ const staticcacheName = 'site-static';
 //shell-assets zijn je shell pagina's
 //de script pagina's moeten ook, anders worden de css en javascript niet ingeladen
 const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html",
-"/styles/styles.css",
+"/styles/default.css", "/styles/mobile.css",
 "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css",
 "https://fonts.googleapis.com/icon?family=Material+Icons",
 "/styles/default.css",
@@ -25,7 +25,6 @@ const shellassets = ["/","/index.html","/pages/login.html","/pages/register.html
 "https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2",
 "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js",
 "https://fonts.gstatic.com/s/materialicons/v78/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
-
 ];
 
 
