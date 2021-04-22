@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,17 +20,27 @@
     <!-- Put <link> here -->
     <link rel="stylesheet" href="../styles/default.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
-    
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="../styles/pc.css">
+
     <title>Menu</title>
 </head>
+
 <body>
-    <div class="wrapper">
+    <div class="wrapper grow" style="padding: 0;">
         <header class="flex top-colorized">
-            <a href="../index.html" style="text-decoration: none; margin: auto 10px;"><img src="../images/icons/back-arrow.png" alt="Back"></a>
-            <h2 class="title l top-title">Hoofdmenu</h2>
+            <a href="../index.html" class="mobile" style="text-decoration: none; margin: auto 10px;"><img
+                    src="../images/icons/back-arrow.png" alt="Back"></a>
+            <h2 class="title l mobile top-title">Hoofdmenu</h2>
+        </header>
+        <header class="flex"
+            style="display:flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+            <h2 class="title l desktop top-title">Hoofdmenu</h2>
+            <a href="./beheerdersportaal.html" class="button s" style="margin: 0;">Beheerdersportaal</a>
+            <a href="https://console.firebase.google.com/u/0/project/my-agenda-app-uz-gent/firestore/data~2Fusers"
+                class="button s" style="margin: 0;">Beheerdersportaal Google</a>
         </header>
 
-        <div class="container" style="margin: 10px 10px 0 10px;">
+        <div class="container grow mobile" style="margin: 10px 10px 0 10px;">
             <div class="row">
                 <a href="./menu/profiel.html" class="side-nav-item waves-effect column">
                     <img src="../images/profielfoto.png" alt="Profiel" class="side-nav-icon">
@@ -40,7 +51,7 @@
                     <span class="button s">Therapie</span>
                 </a>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 2rem;">
                 <a href="./menu/kalender.html" class="side-nav-item waves-effect column">
                     <img src="../images/kalender.png" alt="Kalender" class="side-nav-icon">
                     <span class="button s">Kalender</span>
@@ -50,7 +61,7 @@
                     <span class="button s">Ik wil naar...</span>
                 </a>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 2rem;">
                 <a href="./menu/chat.html" class="side-nav-item waves-effect column">
                     <img src="../images/chat.png" alt="Chat" class="side-nav-icon">
                     <span class="button s">Chat</span>
@@ -60,7 +71,7 @@
                     <span class="button s">Foto's</span>
                 </a>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 2rem;">
                 <a href="./menu/dagboek.html" class="side-nav-item waves-effect column">
                     <img src="../images/dagboek.png" alt="Dagboek" class="side-nav-icon">
                     <span class="button s">Dagboek</span>
@@ -70,7 +81,7 @@
                     <span class="button s">Prikbord</span>
                 </a>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 2rem;">
                 <a href="./menu/nieuws.html" class="side-nav-item waves-effect column">
                     <img src="../images/nieuws.png" alt="Nieuws" class="side-nav-icon">
                     <span class="button s">Kalender</span>
@@ -80,13 +91,61 @@
                     <span class="button s">Team</span>
                 </a>
             </div>
-            
-            <div class="row">
-                <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
+        </div>
+
+        <div class="container desktop" style="margin: 10px 10px 0 10px; padding: 0;">
+            <div class="flow">
+                <a href="./menu/profiel.html" class="side-nav-item waves-effect column">
+                    <img src="../images/profielfoto.png" alt="Profiel" class="side-nav-icon">
+                    <span class="button s">Profiel</span>
+                </a>
+                <a href="./menu/therapie.html" class="side-nav-item waves-effect column">
+                    <img src="../images/therapie.png" alt="Therapie" class="side-nav-icon">
+                    <span class="button s">Therapie</span>
+                </a>
+                <a href="./menu/kalender.html" class="side-nav-item waves-effect column">
+                    <img src="../images/kalender.png" alt="Kalender" class="side-nav-icon">
+                    <span class="button s">Kalender</span>
+                </a>
+                <a href="./menu/navigatie.html" class="side-nav-item waves-effect column">
+                    <img src="../images/navigatie.png" alt="Navigatie" class="side-nav-icon">
+                    <span class="button s">Ik wil naar...</span>
+                </a>
+                <a href="./menu/chat.html" class="side-nav-item waves-effect column">
+                    <img src="../images/chat.png" alt="Chat" class="side-nav-icon">
+                    <span class="button s">Chat</span>
+                </a>
+                <a href="./menu/fotos.html" class="side-nav-item waves-effect column">
+                    <img src="../images/fotos.png" alt="Fotos" class="side-nav-icon">
+                    <span class="button s">Foto's</span>
+                </a>
+                <a href="./menu/dagboek.html" class="side-nav-item waves-effect column">
+                    <img src="../images/dagboek.png" alt="Dagboek" class="side-nav-icon">
+                    <span class="button s">Dagboek</span>
+                </a>
+                <a href="./menu/prikbord.html" class="side-nav-item waves-effect column">
+                    <img src="../images/prikbord.png" alt="Prikbord" class="side-nav-icon">
+                    <span class="button s">Prikbord</span>
+                </a>
+                <a href="./menu/nieuws.html" class="side-nav-item waves-effect column">
+                    <img src="../images/nieuws.png" alt="Nieuws" class="side-nav-icon">
+                    <span class="button s">Kalender</span>
+                </a>
+                <a href="./menu/team.html" class="side-nav-item waves-effect column">
+                    <img src="../images/team.png" alt="Team" class="side-nav-icon">
+                    <span class="button s">Team</span>
+                </a>
             </div>
         </div>
+
+        <footer class="row" style="margin-top: 2rem;">
+            <img class="banner mobile m right" src="../images/UZGent Banner.png" alt="UZ Gent">
+            <img class="banner desktop s right" style="margin: auto 10px 10px auto;" src="../images/UZGent Banner.png"
+                alt="UZ Gent">
+        </footer>
     </div>
 
     <script src="/scripts/app.js"></script>
 </body>
+
 </html>
