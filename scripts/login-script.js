@@ -10,7 +10,7 @@ window.addEventListener('load', (e) => {
         // const Pwd = loginForm.pwd.value;
 
         // auth.signInWithEmailAndPassword(Email, Pwd).then((cred) => {
-            window.location.href = 'https://my-agenda-app-uz-gent.web.app/pages/menu.html';
+        //     window.location.href = 'https://my-agenda-app-uz-gent.web.app/pages/menu.html';
         // })
     });
 });

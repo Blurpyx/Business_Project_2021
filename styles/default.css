@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
-
-hmtl{
+html {
     display: flex;
     flex-direction: column;
 }
@@ -26,6 +24,7 @@ body {
 }
 
 /* hoofd-kolom, enkele kolom */
+
 .container {
     height: 100%;
     width: 100% !important;
@@ -54,6 +53,7 @@ header {
     width: 100%;
     padding: 0 10px;
 }
+
 .row {
     display: flex;
     margin: 0 auto;
@@ -62,10 +62,12 @@ header {
     width: 100%;
     word-wrap: break-word;
 }
+
 .column {
     display: flex;
     flex-direction: column;
 }
+
 .reversed {
     flex-wrap: wrap-reverse;
 }
@@ -73,6 +75,7 @@ header {
 input {
     background-color: #D2E0F2;
 }
+
 input::placeholder {
     color: black;
 }
@@ -86,3 +89,31 @@ label {
 }
 
 /* Algemene instellingen voor banner */
+
+/* Algemene instellingen voor buttons */
+
+.button {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #1E64C8;
+}
+
+/* Algemene instellingen voor titels */
+
+.page-title {
+    font-weight: 450;
+    text-align: center;
+}
+
+/* Normale titels */
+
+.title {
+    font-weight: 350;
+    text-align: center;
+    margin: 20px 0;
+    word-wrap: break-word;
+}
