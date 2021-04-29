@@ -65,6 +65,7 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
   <script>
     // Your web app's Firebase configuration
@@ -80,7 +81,9 @@
     firebase.initializeApp(firebaseConfig);
 
     const db = firebase.firestore();
+    const storage = firebase.storage();
   </script>
   <script src="/scripts/db.js"></script>
+  <script src="/scripts/storage.js"></script>
 </body>
 </html>

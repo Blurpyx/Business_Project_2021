@@ -64,7 +64,7 @@ self.addEventListener('activate', event=>{
 
 self.addEventListener('fetch', event=>{
     //we luisteren naar een fetch event
-    //console.log('Service worker fetch: ',event);
+    console.log('Service worker fetch: ',event);
     //deze fetch is de laatste requirement voor de automatisch install banner
     
     //vergelijken of de request in de cache zit of moet halen uit server
@@ -72,12 +72,12 @@ self.addEventListener('fetch', event=>{
     
     //kijk in de caches en vergelijk of er request overeenkomt
     //cacheRes = response die precached is (in site-static)
-    // event.respondWith(
-    //     caches.match(event.request).then(cacheRes => {
-    //         return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
+    event.respondWith(
+        caches.match(event.request).then(cacheRes => {
+            return cacheRes || fetch(event.request); //als cahceREs leeg is, doe gewoon de fetch request
 
-    //     })
-    // )
+        })
+    )
     
 
 

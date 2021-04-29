@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foto's</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Put <link> here -->
+    <link rel="stylesheet" href="../../styles/default.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../styles/mobile.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="manifest" href="../../manifest.json"> -->
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./images/icons_app/UZ-icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Fotos</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header class="top-colorized">
+            <div class="row" style="justify-content: flex-start;">
+                <a href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img
+                        src="../../images/icons/back-arrow.png" alt="Back"></a>
+                <h2 class="title l top-title">Foto's</h2>
+            </div>
+
+        </header>
+
+        <section class="grow">
+            <div class="column color-block">
+                <div class="center">
+                    <input id="uploadfile" type="file" class="button center s" accept="image/*">
+                    <p id="status"></p>
+                </div>
+                <br>
+                
+                <div style="align-items: center;" class="center">
+                    <img id="myImg" src="#" alt="your image" height=200>
+                </div>
+                <br>
+                <div style="align-items: center;" class="center">
+                    <a id="uploadBtn" class="button s center">Upload</a>
+                </div>
+            </div>
+            
+        </section>
+        
+        <div class="row">
+            <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCMRRBhJ6DIpDsky7v1LKqLKbR2H7IzEjc",
+                authDomain: "my-agenda-app-uz-gent.firebaseapp.com",
+                projectId: "my-agenda-app-uz-gent",
+                storageBucket: "my-agenda-app-uz-gent.appspot.com",
+                messagingSenderId: "534118084923",
+                appId: "1:534118084923:web:75494ad5b84705eb43071e"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            const db = firebase.firestore();
+            const storage = firebase.storage();
+        </script>
+        <!--script src="/scripts/storage.js"></script-->
+        <!-- <script src="/scripts/db.js"></script> -->
+        <script>
+            const status = document.getElementById('status')
+            const output = document.getElementById("myImg");
+            
+            if (window.FileList && window.File && window.FileReader) {
+                document.getElementById("uploadfile").addEventListener("change", event => {
+                    output.src = '';
+                    status.textContent = '';
+                    file = event.target.files[0];
+                    if (!file.type) {
+                        status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+                        return;
+                    }
+                    if (!file.type.match('image.*')) {
+                        status.textContent = 'Error: The selected file does not appear to be an image.'
+                        return;
+                    }
+                    const reader = new FileReader();
+                    reader.addEventListener('load', event => {
+                        output.src = event.target.result;
+                        console.log("Current selected image:" + document.getElementById("uploadfile").value);
+                        console.log("Current slecected image via file.name: " + file.name)
+                    });
+                    reader.readAsDataURL(file);
+                })
+
+                document.getElementById("uploadBtn").addEventListener("click", event => {
+                    // Create a root reference
+                    
+                    var storageRef = storage.ref();
+                    var imagesref = storageRef.child("images/")
+                    var newimageref = imagesref.child(file.name);
+                    var ImgName = document.getElementById("uploadfile").value;
+                    console.log("Image name:" + ImgName);
+                    var uploadTask = newimageref.put(file);
+
+                    uploadTask.on('state_changed', function(snapshot){
+                        var progress = (snapshot.bytesTransferred /snapshot.totalBytes) *100;
+                        console.log("Progress: " + progress + " %");
+                    }
+                    );
+
+
+
+                    }
+                    )
+
+                
+            }
+
+            
+            
+
+            
+
+        </script>
+    </div>
 </body>
+
 </html>
