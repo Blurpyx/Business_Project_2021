@@ -25,6 +25,8 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <title>Registreren</title>
 </head>
@@ -88,7 +90,49 @@
         <section> 
           <div class="container center">
             <h4>Mijn account</h4>
-            <i class="material-icons large" style="font-size: 6rem;">account_circle</i>
+            <div id="profile-pic-div">
+            <img class="page-banner" id="profile-photo" src="../images/profielfoto.png" alt="profielfoto">
+            <input type="file" id="myfile">
+            <label for="file" id="kiesBtn">Kies profielfoto</label>
+            </div>
+            <style>
+              #profile-photo{
+                height: 100%;
+                border: 1px solid grey;
+                cursor: pointer;
+              }
+
+              #myfile{
+                display: none;
+              }
+              #profile-pic-div{
+                height: 100%;
+                border-radius: 50%;
+                overflow: hidden;
+                
+                
+              }
+
+              #kiesBtn{
+                
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left:50%;
+                transform: translateX(-50%);
+                text-align: center;
+                font-size: 15px;
+
+              }
+            </style>
+            <script>
+              $("#profile-photo").click(function(){
+                $("#myfile").click();
+              });
+               
+           
+
+            </script>
             <div class="row">
                 <div class="col s2"></div>
                 <div class="input-field col s8">
@@ -111,7 +155,7 @@
         
         </section>
         <section class="center col s8">
-          <div class="row"><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></div>
+          <div class="center"><p class="center">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></div>
           <div class="grow">
             <button type="submit" class="button m center" id="btnReg">Registreer</button>
           </div>
