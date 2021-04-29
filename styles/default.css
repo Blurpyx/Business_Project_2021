@@ -68,6 +68,16 @@ header {
     flex-direction: column;
 }
 
+.column > .block {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.column > .block > img {
+    width: 10rem;
+}
+
 .reversed {
     flex-wrap: wrap-reverse;
 }

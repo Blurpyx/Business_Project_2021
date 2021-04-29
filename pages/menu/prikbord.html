@@ -13,6 +13,7 @@
     <!-- Put <link> here -->
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="../../styles/pc.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -35,7 +36,7 @@
         <header class="top-colorized">
             <div style="display: flex; justify-content: flex-start; margin-bottom: 0;">
                 <a href="#" id="backButton" style="text-decoration: none; margin: auto 10px;"><img src="/images/icons/back-arrow.png" alt="Back"></a>
-                <a href="../menu.html" id="homeButton" style="text-decoration: none; margin: auto 10px; display: flex;"><img src="/images/icons/back-arrow.png" alt="Back"></a>
+                <a class="mobile" href="../menu.html" id="homeButton" style="text-decoration: none; margin: auto 10px; display: flex;"><img src="/images/icons/back-arrow.png" alt="Back"></a>
                 <h2 class="title l top-title" id="title">Prikbord</h2>
                 <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
                     <span class="material-icons" id="addNote" style="font-size: 40px; padding-right: .5em;">note_add</span>
@@ -60,7 +61,7 @@
                 <span style="padding-left: .5em;">Ergo</span>
             </div>
         </div>
-        <div class="color-block" id="note-add" style="margin-top: 20%;">
+        <div class="color-block" id="note-add">
             <form action="" style="text-align: center;">
                 <textarea id="note_title" cols="30" rows="2" placeholder="Voer hier de titel van je notitie in" style="font-size: 1.5rem; min-height: 4.1em; padding: .5em;"></textarea>
                 <textarea id="note" cols="30" rows="10" placeholder="Voer hier je notitie in" style="font-size: 1.5rem; min-height: 7em; padding: .5em;"></textarea>
@@ -70,7 +71,8 @@
     </div>
 
     <footer style="margin-top: 1em;">
-        <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+        <img class="banner m right mobile" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+        <img class="banner s right desktop" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
     </footer>
     <!-- JS en dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>

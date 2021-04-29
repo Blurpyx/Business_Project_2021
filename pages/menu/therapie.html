@@ -14,6 +14,7 @@
     <!-- Put <link> here -->
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="../../styles/pc.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -39,10 +40,10 @@
     <title>Therapie</title>
 </head>
 <body>
-    <header class="top-colorized">
+    <header class="top-colorized flex-header">
         <div style="display: flex;">
-            <a id="backbutton-page" href="#" style="text-decoration: none; margin: auto 10px; display: none;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
-            <a id="backbutton-back" href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <a class="mobile" id="backbutton-page" href="#" style="text-decoration: none; margin: auto 10px; display: none;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+            <a class="mobile" id="backbutton-back" href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
             <h2 class="title l top-title">Therapie</h2>
         </div>
         <div class="week-container m" id="weekDetails">08/03/'21 - 14/03/'21</div>
@@ -66,7 +67,8 @@
     </div>
 
     <footer class="flex">
-        <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent">
+        <img class="banner m right mobile" src="../../images/UZGent Banner.png" alt="UZ Gent">
+        <img class="banner s right desktop" src="../../images/UZGent Banner.png" alt="UZ Gent">
     </footer>
 
     <!-- Eigen script -->

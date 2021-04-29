@@ -214,6 +214,10 @@ img.page-banner {
 
 /* Instellingen voor Sections */
 
+#note-add {
+    margin-top: 20%;
+}
+
 .debugComment.center {
     text-align: center;
 }
