@@ -11,6 +11,7 @@ window.addEventListener('load', (e) => {
 
         auth.signInWithEmailAndPassword(Email, Pwd).then((cred) => {
             window.location.href = '../pages/menu.html';
+            console.log(cred);
         })
     });
 });
