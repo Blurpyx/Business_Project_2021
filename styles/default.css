@@ -93,6 +93,7 @@ label {
 /* Algemene instellingen voor buttons */
 
 .button {
+    cursor: pointer;
     font-size: 18px;
     text-decoration: none;
     color: black;

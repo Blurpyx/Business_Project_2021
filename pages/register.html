@@ -10,6 +10,7 @@
     <!-- Put <link> here -->
     <link rel="stylesheet" href="../styles/default.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="../styles/pc.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="manifest" href="/manifest.json">
@@ -30,7 +31,7 @@
 <body>
   <div class="container">
     <header>
-      <a href="../index.html" style="text-decoration: none;"><img src="../images/icons/back-arrow.png" alt="Back"></a>
+      <a href="../index.html" class="mobile" style="text-decoration: none;"><img src="../images/icons/back-arrow.png" alt="Back"></a>
       <h2 class="page-title l">Registratie</h2>
     </header>
     
@@ -119,7 +120,8 @@
     </div>
   </div>
     <footer class="grow">
-      <img class="banner m right" src="../images/UZGent Banner.png" alt="UZ Gent">
+      <img class="banner m right mobile" src="../images/UZGent Banner.png" alt="UZ Gent">
+      <img class="banner s right desktop" src="../images/UZGent Banner.png" alt="UZ Gent">
     </footer>
     <script>
       // const firebase = require("firebase");

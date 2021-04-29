@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+.flex {
+    display: flex;
+}
+
 .grow {
     align-items: center;
 }
@@ -34,6 +38,12 @@
 
 .banner.right {
     margin: 0 10px 10px auto;
+}
+
+img.page-banner {
+    width: 30%;
+    border-radius: 50%;
+    /* margin-left: 10px; */
 }
 
 /* Instellingen voor buttons */

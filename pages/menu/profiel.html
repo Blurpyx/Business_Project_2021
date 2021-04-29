@@ -13,6 +13,7 @@
     <!-- Put <link> here -->
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="../../styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="../../styles/pc.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,7 +29,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="top-colorized">
+        <header class="top-colorized mobile">
             <div class="row" style="justify-content: flex-start;">
                 <a href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
                 <h2 class="title l top-title">Profiel</h2>
@@ -39,7 +40,7 @@
             </div>
         </header>
 
-        <section class="grow">
+        <section class="grow mobile">
             <div class="column color-block">
                 <div class="row" style="margin: 0 auto;">
                     <span class="text m">Telefoonnummer:</span>
@@ -52,9 +53,27 @@
             </div>
         </section>
 
-        <div class="row">
-            <img class="banner m right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
-        </div>
+        <section class="grow desktop" style="align-items: flex-start;">
+            <div class="flex" style="align-items: center; padding: 1rem 0;">
+                <img class="page-banner" src="../../images/profielfoto.png" alt="profielfoto">
+                <p class="page-title s" id="name" style="margin-left: 2rem;">Tommy Tytgat</p>
+            </div>
+            <div class="column color-block">
+                <div class="flex" style="justify-content: space-between;">
+                    <span class="text m" style="padding-right: .5rem;">Telefoonnummer:</span>
+                    <span class="text m" style="margin-right: 0;">0488514869</span>
+                </div>
+                <div class="flex" style="justify-content: space-between;">
+                    <span class="text m">Kamernummer: </span>
+                    <span class="text m" style="margin-right: 0;">A701</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="row">
+            <img class="banner m mobile right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+            <img class="banner s desktop right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
+        </footer>
     </div>
 </body>
 </html>
