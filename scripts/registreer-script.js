@@ -53,7 +53,7 @@ window.addEventListener('load', (event) => {
                     console.log(cred.user);
                 })
                 .then(() => {
-                    window.location.href = 'https://my-agenda-app-uz-gent.web.app/pages/menu.html';
+                    window.location.href = '../pages/menu.html';
                 });
 
             regForm.reset();

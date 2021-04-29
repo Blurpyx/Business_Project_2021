@@ -24,17 +24,30 @@
     <!-- Compiled and minified JavaScript -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     
     <title>Profiel</title>
 </head>
 <body>
     <div class="container">
-        <header class="top-colorized mobile">
-            <div class="row" style="justify-content: flex-start;">
-                <a href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
-                <h2 class="title l top-title">Profiel</h2>
-            </div>
+        <header class="top-colorized">
             <div class="row">
+                <div class="row" style="justify-content: flex-start; margin-bottom: 0;">
+                    <a class="mobile" href="../menu.html" style="text-decoration: none; margin: auto 10px;"><img src="../../images/icons/back-arrow.png" alt="Back"></a>
+                    <h2 class="title l top-title">Profiel</h2>
+                </div>
+                <div class="red flex" style="margin: auto; justify-content: center; align-items: center; border-radius: 10px; margin-right: 1rem; cursor: pointer;">
+                    <h2 class="title m top-title" id="log-out-button" style="width: 10ch; margin: 1rem;">Uitloggen</h2>
+                </div>
+            </div>
+            <div class="row mobile">
                 <img class="page-banner" src="../../images/profielfoto.png" alt="profielfoto">
                 <p class="page-title s center grow" id="name">Tommy Tytgat</p>
             </div>
@@ -74,6 +87,8 @@
             <img class="banner m mobile right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
             <img class="banner s desktop right" src="../../images/UZGent Banner.png" alt="UZ Gent Banner">
         </footer>
+
+        <script src="../../scripts/logout.js"></script>
     </div>
 </body>
 </html>
