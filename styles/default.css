@@ -128,3 +128,36 @@ label {
     margin: 20px 0;
     word-wrap: break-word;
 }
+
+#profile-photo{
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    width: relative;
+    margin: 0;
+  }
+
+  #myfile{
+    display: none;
+  }
+  #profile-pic-div{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    
+    
+  }
+
+  #kiesBtn{
+    
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 15px;
+
+  }

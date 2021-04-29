@@ -92,44 +92,14 @@
             <h4>Mijn account</h4>
             <div id="profile-pic-div">
             <img class="page-banner" id="profile-photo" src="../images/profielfoto.png" alt="profielfoto">
-            <input type="file" id="myfile">
+            <input type="file" id="myfile" accept="image/*">
             <label for="file" id="kiesBtn">Kies profielfoto</label>
             </div>
             <style>
-              #profile-photo{
-                height: 100%;
-                border: 1px solid grey;
-                cursor: pointer;
-              }
 
-              #myfile{
-                display: none;
-              }
-              #profile-pic-div{
-                height: 100%;
-                border-radius: 50%;
-                overflow: hidden;
-                
-                
-              }
-
-              #kiesBtn{
-                
-                display: none;
-                position: absolute;
-                bottom: 0;
-                left:50%;
-                transform: translateX(-50%);
-                text-align: center;
-                font-size: 15px;
-
-              }
             </style>
             <script>
-              $("#profile-photo").click(function(){
-                $("#myfile").click();
-              });
-               
+              
            
 
             </script>
