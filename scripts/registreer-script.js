@@ -41,6 +41,7 @@ window.addEventListener('load', (event) => {
             var Adres = regForm.adres.value;
             var Tel = regForm.homephone.value;
             var Gsm = regForm.gsmphone.value;
+            var Stad = regForm.stad.value;
 
             auth.createUserWithEmailAndPassword(Email, Pwd)
                 .then(cred => {
@@ -48,7 +49,8 @@ window.addEventListener('load', (event) => {
                         username: Username,
                         adres: Adres,
                         tel: Tel,
-                        gsm: Gsm
+                        gsm: Gsm,
+                        "stad + code": Stad
                     });
                     console.log(cred.user);
                 })
