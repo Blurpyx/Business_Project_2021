@@ -79,11 +79,13 @@ auth.onAuthStateChanged(user => {
                     // console.log(key + ': ' + doc.data()[key]);  // "key: value"
                     spanKey.innerHTML = key.capitalize();
                     spanVal.innerHTML = doc.data()[key].capitalize();
+
+                    
+                    div.appendChild(spanKey);
+                    div.appendChild(spanVal);
+                    document.querySelector('#info-block').appendChild(div);
                 }
             }
-            div.appendChild(spanKey);
-            div.appendChild(spanVal);
-            document.querySelector('#info-block').appendChild(div);
         });
     });
 });
