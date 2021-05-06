@@ -66,7 +66,7 @@ auth.onAuthStateChanged(user => {
             spanKey.classList = "text m";
             spanVal.classList = "text m right";
 
-            if (key != "username") {
+            if (key != "username" && key != "ProfilePath") {
                 if (doc.data()[key] != "") {
                     // console.log(key + ': ' + doc.data()[key]);  // "key: value"
                     spanKey.innerHTML = key.capitalize();
