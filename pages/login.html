@@ -46,9 +46,9 @@
 
         <section class="grow">
             <form action="#" style="width: 60%;" id="login-form">
-                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="email" placeholder="Email" required autocomplete="email">
                 <br>
-                <input type="password" id="pwd" placeholder="Wachtwoord">
+                <input type="password" id="pwd" placeholder="Wachtwoord" required autocomplete="current-password">
                 <br>
                 <label class="left" style="margin-bottom: 30px;">
                     <input type="checkbox" class="filled-in">
@@ -58,7 +58,7 @@
                     <button type="submit" class="button m center wide" id="login-button">Log in</button>
                 </div>
             </form>
-            <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p>
+            <!-- <p class="debugComment center">Deze knop leidt naar het menu, aangezien je nu nog niet kan inloggen.</p> -->
         </section>
 
         <footer>
