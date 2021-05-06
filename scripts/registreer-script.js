@@ -1,7 +1,8 @@
 window.addEventListener('load', (event) => {
     event.preventDefault();
     regForm = document.getElementById('regForm');
-    
+    let file = {};
+
     $("#profile-photo").click(function(){
         $("#myfile").click();
       });
@@ -43,17 +44,27 @@ window.addEventListener('load', (event) => {
             var Gsm = regForm.gsmphone.value;
 
             auth.createUserWithEmailAndPassword(Email, Pwd)
+
                 .then(cred => {
+                    uploadProfilePic(cred.user);
+                    
                     return db.collection('users').doc(cred.user.uid).set({
                         username: Username,
                         adres: Adres,
                         tel: Tel,
-                        gsm: Gsm
+                        gsm: Gsm,
+                        
                     });
-                    console.log(cred.user);
+
+
+                    
+
+                    
                 })
                 .then(() => {
-                    window.location.href = '../pages/menu.html';
+                    //window.location.href = '../pages/menu.html';
+                    
+                    console.log("i should sent to: window.location.href = '../pages/menu.html' ")
                 });
 
             regForm.reset();
@@ -61,4 +72,44 @@ window.addEventListener('load', (event) => {
             console.log('Passwords do not match!');
         }
     });
+    function uploadProfilePic(user)
+    {
+        var userID = user.uid;
+        var PictureName = userID + "_" + file.name;
+        console.log("Picture name: " + PictureName + " changed to profile.jpg");
+    
+        var storageRef = storage.ref();
+        var ProfilePicRef = storageRef.child("users/" + userID + '/profile.jpg');
+    
+        var uploadTask = ProfilePicRef.put(file);
+    
+        uploadTask.on('state_changed', (snapshot) => {
+            var progress = (snapshot.bytesTransferred /snapshot.totalBytes) *100;
+            console.log("Progress upload: " + progress + "%");
+            
+        },
+        (error) =>{console.log("Er was ne errorin het uploaden")},
+        ()=>{
+                console.log("upload complete")
+                ProfilePicRef.getDownloadURL().then(imgUrl =>{
+                    console.log("The downloaded url is: " + imgUrl)
+
+                    user.updateProfile({
+                        photoURL: imgUrl
+                    })
+                    .then(()=>{
+                        console.log("Current profile: " + userID + "has profile pic with url: "+ user.photoURL);
+                        db.collection('users').doc(user.uid).update({ProfilePath: user.photoURL});
+                    })
+                    .catch((error)=> {console.log("Error was catched, updateProfile failed");})
+
+                })
+            }
+        );
+
+        console.log("User: " + user)
+
+    }
+
 });
+
