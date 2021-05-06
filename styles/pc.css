@@ -24,6 +24,12 @@ header .material-icons {
     cursor: pointer;
 }
 
+/* Instellingen voor sections */
+
+#profiel-info {
+    align-items: flex-start;
+}
+
 /* Instellingen voor divs */
 
 .week-container {
