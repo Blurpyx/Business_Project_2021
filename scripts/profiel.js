@@ -66,6 +66,14 @@ auth.onAuthStateChanged(user => {
             spanKey.classList = "text m";
             spanVal.classList = "text m right";
 
+            if (key == "ProfilePath")
+            {
+                if (doc.data()[key] != "")
+                {
+                    img.src = doc.data()[key];
+                }
+            }
+
             if (key != "username" && key != "ProfilePath") {
                 if (doc.data()[key] != "") {
                     // console.log(key + ': ' + doc.data()[key]);  // "key: value"

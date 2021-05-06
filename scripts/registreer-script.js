@@ -63,7 +63,7 @@ window.addEventListener('load', (event) => {
                     
                 })
                 .then(() => {
-                    //window.location.href = '../pages/menu.html';
+                    window.location.href = '../pages/menu.html';
                     
                     console.log("i should sent to: window.location.href = '../pages/menu.html' ")
                 });
