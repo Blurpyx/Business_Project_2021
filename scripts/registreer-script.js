@@ -63,7 +63,7 @@ window.addEventListener('load', (event) => {
                     
                 })
                 .then(() => {
-                    window.location.href = '../pages/menu.html';
+                    // window.location.href = '../pages/menu.html';
                     
                     console.log("i should sent to: window.location.href = '../pages/menu.html' ")
                 });
@@ -100,7 +100,9 @@ window.addEventListener('load', (event) => {
                     })
                     .then(()=>{
                         console.log("Current profile: " + userID + "has profile pic with url: "+ user.photoURL);
-                        db.collection('users').doc(user.uid).update({ProfilePath: user.photoURL});
+                        db.collection('users').doc(user.uid).update({
+                            ProfilePath: user.photoURL
+                        });
                     })
                     .catch((error)=> {console.log("Error was catched, updateProfile failed");})
 
@@ -108,8 +110,8 @@ window.addEventListener('load', (event) => {
             }
         );
 
-        console.log("User: " + user)
-
+        console.log("User: " + user);
+        
     }
 
 });
