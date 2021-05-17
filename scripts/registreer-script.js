@@ -104,7 +104,7 @@ window.addEventListener('load', (event) => {
                             ProfilePath: user.photoURL
                         });
                     })
-                    .catch((error)=> {console.log("Error was catched, updateProfile failed");})
+                    .catch((error)=> {console.log("Error was caught, updateProfile failed");})
 
                 })
             }
