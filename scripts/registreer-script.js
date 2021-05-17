@@ -75,7 +75,7 @@ window.addEventListener('load', (event) => {
                         })
                     .catch(error=>{
                         console.log("An error has been catched in UploadProfilePic Promise:");
-                        console.log("Error");
+                        console.log("Error:" + error);
                     })
                     
                 })
@@ -131,7 +131,7 @@ window.addEventListener('load', (event) => {
 
         
         
+    })
     }
-
 });
 
